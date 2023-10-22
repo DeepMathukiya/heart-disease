@@ -27,7 +27,14 @@ def predict():
         feature.append(request.form['Thal'])
         final = [np.array(feature)]
         predict_val = RF.predict(final)
-        return render_template("index.html" , output= "{}" .format(final))
+        if(predict_val == 0):
+            return render_template("index.html" , output= "diameter narrowing less then 50%")    
+        else:
+            return render_template("index.html" , output= "diameter narrowing grater then 50%")    
+                
+    #  num: diagnosis of heart disease (angiographic disease status)
+    #     -- Value 0: < 50% diameter narrowing
+    #     -- Value 1: > 50% diameter narrowing
     
 
 if __name__ == '__main__':
