@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request
-from joblib import load
+# from joblib import load
 import numpy as np
-RF = load("HeartDisease-RF.joblib")
+import pickle
+RF = pickle.load(open('Heart-disease-RF.pkl','rb'))
+
+# RF = load("HeartDisease-RF.joblib")
 app = Flask(__name__)
 
 @app.route('/')
@@ -28,9 +31,9 @@ def predict():
         final = [np.array(feature)]
         predict_val = RF.predict(final)
         if(predict_val == 0):
-            return render_template("index.html" , output= "diameter narrowing less then 50%")    
+            return render_template("index.html" , output= "There is no risk of Heart Disease")    
         else:
-            return render_template("index.html" , output= "diameter narrowing grater then 50%")    
+            return render_template("index.html" , output= "There is a risk for Heart Disease")    
                 
     #  num: diagnosis of heart disease (angiographic disease status)
     #     -- Value 0: < 50% diameter narrowing

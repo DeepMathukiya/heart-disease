@@ -1,5 +1,5 @@
 FLask
 Gunicorn
-joblib
+
 numpy
 
