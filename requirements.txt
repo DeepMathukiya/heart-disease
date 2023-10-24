@@ -2,4 +2,5 @@ FLask
 Gunicorn
 joblib
 numpy
+Scikit-learn
 
