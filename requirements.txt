@@ -5,5 +5,5 @@ numpy
 Scikit-learn
 Pandas
 seaborn
-matplotlib.pyplot
+matplotlib
 Tenserflow
