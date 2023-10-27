@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from joblib import loads
+from joblib import load
 import numpy as np
 import pickle
 # RF = pickle.load(open('Heart-disease-RF.pkl','rb'))
