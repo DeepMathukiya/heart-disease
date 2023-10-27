@@ -6,4 +6,3 @@ Scikit-learn
 Pandas
 seaborn
 matplotlib
-tenserflow
