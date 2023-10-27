@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from joblib import load
 import numpy as np
-import pickle
+# import pickle
 # RF = pickle.load(open('Heart-disease-RF.pkl','rb'))
 
 RF = load("HeartDisease-RF.joblib")
@@ -42,4 +42,4 @@ def predict():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port='5000')        
-       
+
