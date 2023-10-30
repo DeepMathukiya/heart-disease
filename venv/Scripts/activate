@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\Python\ML by Dr.DS sir\heart-disease dataset\venv"
+VIRTUAL_ENV="D:\Python\ML by Dr.DS sir\heart-disease\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
